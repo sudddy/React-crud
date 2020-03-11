@@ -1,6 +1,7 @@
 import React from 'react';
+import { Button } from 'react-bootstrap'
 
-const UserTable = () => (
+const UserTable = props => (
     <table>
         <thead>
             <tr>
@@ -10,14 +11,27 @@ const UserTable = () => (
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td> Name data</td>
-                <td>Username data</td>
+            {props.users.length > 0 ? (
+                props.users.map(user => (
+                <tr key={user.id}>
+                <td> {user.name}</td>
+                <td> {user.username}</td>
                 <td>
-                    <button className="button muted-button"> Edit</button>
-                    <button className="bbutton muted-button"> Delete</button>
+                    <Button className="button muted-button"> Edit</Button>&nbsp;
+                    <Button className="button muted-button"> Delete</Button>
                 </td>
             </tr>
+                    
+                ))
+                ) : (
+                    <tr>
+                        <td colspan={3}> No users</td>
+                    </tr>
+                )
+            }
+            
         </tbody>
     </table>
 )
+
+export default UserTable;
