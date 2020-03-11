@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import UserTable from './component/UserTable/userTable';
 import {Col, Row} from 'react-bootstrap'
+import AddUserForms from './component/forms/AddUserForms';
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
       <Row className="row">
       <Col md={6} className="flex-large">
         <h2>Add Users</h2>
+        <AddUserForms />
       </Col>
       <Col md={6} className="flex-large">
         <h2>View users</h2>
