@@ -8,10 +8,8 @@ import ReactDOM from 'react-dom'
 const App = () => {
 
   const usersData = [
-    { id: 1, name: 'Sudharsan', username: 'suddy' },
-    { id: 2, name: 'raghavan', username: 'rags' },
-    { id: 3, name: 'kaushik', username: 'cow' },
-    { id: 4, name: 'chandru', username: 'chandy' },
+    { id: 1, name: 'James', username: 'Bond' },
+    { id: 2, name: 'Harry', username: 'Potter' }
   ]
   const [users, setUsers] = useState(usersData);
   const [editing, setEditing] = useState(false);
